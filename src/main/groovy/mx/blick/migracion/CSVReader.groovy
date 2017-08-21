@@ -2,10 +2,12 @@ package mx.blick.migracion
 
 import com.xlson.groovycsv.CsvIterator
 import com.xlson.groovycsv.PropertyMapper
+import groovy.util.logging.Log4j
 
 import static com.xlson.groovycsv.CsvParser.parseCsv
 
 @Singleton
+@Log4j
 class CSVReader {
     List<Map> studios = []
     List<Map> freelancers = []
@@ -17,8 +19,7 @@ class CSVReader {
     }
 
     void loadClients() {
-        clients = []
-        String csvPath = getClass().getResource('/csv/clients.csv').toURI()
+        String csvPath = getClass().getResource('/csv/clients.csv').getFile()
         String csvContent = new File(csvPath).text
 
         CsvIterator data = parseCsv(csvContent) as CsvIterator
@@ -29,58 +30,27 @@ class CSVReader {
     }
 
     void loadStudiosAndFreelancers() {
-        String csvPath = getClass().getResource('/csv/studios.csv').toURI()
+        String csvPath = getClass().getResource('/csv/estudios.csv').getFile()
         String csvContent = new File(csvPath).text
 
         CsvIterator data = parseCsv(csvContent) as CsvIterator
         data.each { PropertyMapper line ->
-            Map sanitizedMap = sanitizeMap(line.toMap())
-            String studioTypeFromRow = (sanitizedMap.get("userType") as String).toLowerCase().trim()
-            if ("studio".equals(studioTypeFromRow)) {
-                studios.add(sanitizeMap())
+            Map map = sanitizeMap(line.toMap())
+            String studioTypeFromRow = (map.get("userType") as String)?.toLowerCase()?.trim()
+            if ("studio" == studioTypeFromRow) {
+                studios.add(map)
             } else {
-                freelancers.add(sanitizeMap())
+                freelancers.add(map)
             }
-        }
-    }
-
-    List<Map> getStudios() {
-        if(this.studios.size() > 0) {
-            return studios
-        } else {
-            this.loadStudiosAndFreelancers()
-            return studios
-        }
-    }
-
-    List<Map> getFreelancers() {
-        if(this.freelancers.size() > 0) {
-            return freelancers
-        } else {
-            this.loadStudiosAndFreelancers()
-            return freelancers
-        }
-    }
-
-    List<Map> getClients() {
-        if(this.clients.size() > 0) {
-            return clients
-        } else {
-            this.loadClients()
-            return clients
         }
     }
 
     private static Map sanitizeMap(Map currentRowMap) {
-        Map sanitizedMap = [:]
+        Map map = [:]
         currentRowMap.each { key, value ->
             String stringValue = "${value}".trim()
-            try {
-                sanitizedMap["${key}"] = stringValue as Double
-            } catch (Exception e) {
-                sanitizedMap["${key}"] = stringValue
-            }
+            map["${key}"] = stringValue
         }
-        return sanitizedMap
+        return map
     }
 }
