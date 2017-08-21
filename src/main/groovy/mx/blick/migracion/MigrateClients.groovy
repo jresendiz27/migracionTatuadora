@@ -10,11 +10,10 @@ class MigrateClients {
         csvReader.loadClients()
         List<Map> clients = csvReader.clients
 
-        databaseTool.truncateUser();
-
         clients.each { clientMap ->
-            //log.error(clientMap.toString())
-            databaseTool.insertClient(clientMap)
+            Long createdAddressId = databaseTool.createAddress(clientMap).first()[0] as Long
+            clientMap.addressId = createdAddressId
+            databaseTool.insertUserClient(clientMap)
         }
     }
 }
