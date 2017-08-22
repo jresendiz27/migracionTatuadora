@@ -12,11 +12,7 @@ class CSVReader {
     List<Map> studios = []
     List<Map> freelancers = []
     List<Map> clients = []
-
-    void loadCSVs() {
-        this.loadClients()
-        this.loadStudiosAndFreelancers()
-    }
+    List<Map> artists = []
 
     void loadClients() {
         String csvPath = getClass().getResource('/csv/clients.csv').getFile()
@@ -45,11 +41,26 @@ class CSVReader {
         }
     }
 
+    void loadArtists() {
+        String csvPath = getClass().getResource('/csv/artists.csv').getFile()
+        String csvContent = new File(csvPath).text
+
+        CsvIterator data = parseCsv(csvContent) as CsvIterator
+        data.each { PropertyMapper line ->
+            Map artistSanitizedMap = sanitizeMap(line.toMap())
+            artists.add(artistSanitizedMap)
+        }
+    }
+
     private static Map sanitizeMap(Map currentRowMap) {
         Map map = [:]
         currentRowMap.each { key, value ->
             String stringValue = "${value}".trim()
-            map["${key}"] = stringValue
+            if (stringValue.toLowerCase() in ["true", "false"]) {
+                map["${key}"] = "true".equalsIgnoreCase(stringValue) ? 1 : 0
+            } else {
+                map["${key}"] = stringValue
+            }
         }
         return map
     }

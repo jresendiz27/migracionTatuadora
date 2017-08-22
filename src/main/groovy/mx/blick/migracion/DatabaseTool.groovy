@@ -10,21 +10,14 @@ import java.sql.SQLException
 class DatabaseTool {
 
     private String url = "jdbc:mysql://35.161.232.194:3306/latatuadora_core";
-    private String user = "latatuadora";
-    private String password = "latatuadora";
+    private String user = "root";
+    private String password = "n0m3l0s3";
     private String driver = "com.mysql.jdbc.Driver";
     String defaultPassword = '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO' //latatuadora-2017
     private Sql sql;
 
     private DatabaseTool() throws SQLException, ClassNotFoundException {
         sql = Sql.newInstance(url, user, password, driver);
-    }
-
-    void truncateUserRelatedTables() {
-        this.truncateAddress()
-        this.truncateUser()
-        this.truncateStudio()
-        this.truncateFreelance()
     }
 
     void truncateAddress() {
@@ -46,15 +39,15 @@ class DatabaseTool {
     }
 
     void truncateFreelance() {
-        String truncateFreelance = "TRUNCATE TABLE latatuadora_core.Freelance"
+        String truncateFreelance = "TRUNCATE TABLE latatuadora_core.Freelancer"
         log.debug(truncateFreelance)
         sql.execute(truncateFreelance);
     }
 
-    void truncateStudioStyles() {
-        String truncateStudioStyle = "TRUNCATE TABLE latatuadora_core.StudioStyle"
-        log.debug(truncateStudioStyle);
-        sql.execute(truncateStudioStyle);
+    void truncateArtists() {
+        String truncateFreelance = "TRUNCATE TABLE latatuadora_core.Artist"
+        log.debug(truncateFreelance)
+        sql.execute(truncateFreelance);
     }
 
     List insertUserClient(Map values) {
@@ -62,7 +55,9 @@ class DatabaseTool {
             INSERT INTO 
                 latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
             values 
-                (:name, :lastname, :email, '$defaultPassword', :telephone, ${Constants.USER_TYPE.user}, :addressId, NOW(), NOW())"""
+                (:name, :lastname, :email, '$defaultPassword', :telephone, ${
+            Constants.USER_TYPE.user
+        }, :addressId, NOW(), NOW())"""
         this.executeInsert(insertUserSQL, values)
     }
 
@@ -70,8 +65,10 @@ class DatabaseTool {
         String insertUserSQL = """
             INSERT INTO 
                 latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId,createdAt, updatedAt) 
-            values a
-                (:name, :lastname, :email, '$defaultPassword', :telephone, ${Constants.USER_TYPE.studio}, :addressId, NOW(), NOW())"""
+            values
+                (:name, :lastname, :email, '$defaultPassword', :telephone, ${
+            Constants.USER_TYPE.studio
+        }, :addressId, NOW(), NOW())"""
         this.executeInsert(insertUserSQL, values)
     }
 
@@ -80,67 +77,62 @@ class DatabaseTool {
             INSERT INTO 
                 latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
             values 
-                (:name, :lastname, :email, '$defaultPassword', :telephone, ${Constants.USER_TYPE.freelance}, :addressId, NOW(), NOW())"""
+                (:name, :lastname, :email, '$defaultPassword', :telephone, ${
+            Constants.USER_TYPE.freelance
+        }, :addressId, NOW(), NOW())"""
         this.executeInsert(insertUserSQL, values)
     }
 
     List createStudio(Integer userId, Map values) {
         String insertUserSQL = """
-            INSERT INTO 
-                latatuadora_core.Studio(name, certCofepris, addressId, publication, titleImgUrl, logoUrl, profileImgUrl, about, userId, status, createdAt, updatedAt)
+            INSERT INTO latatuadora_core.Studio
+                (name, certCofepris, addressId, titleImgUrl, logoUrl, profileImgUrl, about, userId, status, createdAt, updatedAt, websiteUrl, fbUrl, twUrl, insUrl)
             values 
-                (:name, :certCofepris, :addressId, TRUE, :titleImgUrl, :logoUrl, :profileImgUrl, :about, :userId, ${
+                (:name, :certCofepris, :addressId, :titleImgUrl, :logoUrl, :profileImgUrl, :about, :userId, ${
             Constants.STUDIO_STATUS.publicate
-        }, NOW(), NOW())"""
+        }, NOW(), NOW(), :websiteUrl, :fbUrl, :twUrl, :insUrl)"""
         this.executeInsert(insertUserSQL, values)
     }
 
     List createFreelance(Integer userId, Map values) {
         String insertUserSQL = """
             INSERT INTO 
-                latatuadora_core.Freelancer(user, about, published, profileImgUrl, canGoHome, name, rank, createdAt, updatedAt)
+                latatuadora_core.Freelancer(user, about, published, profileImgUrl, canGoHome, name, rank, createdAt, updatedAt, websiteUrl, fbUrl, twUrl, insUrl)
             values 
-                ($userId, :about, TRUE, :profileImgUrl, :canGoHome, :name, 5, NOW(), NOW())"""
+                ($userId, :about, 1, :profileImgUrl, :canGoHome, :name, 5, NOW(), NOW(), :websiteUrl, :fbUrl, :twUrl, :insUrl)"""
         this.executeInsert(insertUserSQL, values)
     }
 
-    Map findByUserIdOrEmail(Integer id, String email) {
-        String findUserByIdOrEmailQuery = """
-            SELECT 
-                id, email
-            FROM
-                latatuadora_core.USER
-            WHERE
-                id = $id
-            OR
-                TRIM(LOWER(email)) like ('%${email.toLowerCase().trim()}%')"""
-        this.queryFirstRow(findUserByIdOrEmailQuery)
+    List createArtist(Integer studioId, Map artistMap) {
+        String createArtistQuery = """
+            INSERT INTO
+                latatuadora_core.Artist (name, avatarUrl, bio, responseTime, studio)
+            VALUES (:name, :avatarUrl, :bio, :responseTime, ${studioId})"""
+        this.executeInsert(createArtistQuery, artistMap)
     }
 
-    Map findStudioByIdOrEmail(Integer id, String email) {
-        String findStudioByIdOrEmailQuery = """
-            SELECT 
-                Studio.id, Studio.name, User.email
-            FROM
-                latatuadora_core.Studio 
-            INNER JOIN
-                latatuadora_core.User in Studio.userId = User.id
-            WHERE
-                User.id = $id
-            OR
-                TRIM(LOWER(email)) like ('%${email.toLowerCase().trim()})%')"""
-        return this.queryFirstRow(findStudioByIdOrEmailQuery)
+    List associateArtistWithStyle(Integer artistId, Integer styleId) {
+        String associateArtistWithStyle = """
+            INSERT INTO
+                latatuadora_core.ArtistStyle (artistId, styleId)
+            VALUES (${artistId}, ${styleId})"""
+        this.executeInsert(associateArtistWithStyle, null)
     }
 
-    Map findStyleByName(String styleName) {
-        String styleByName = """
-            SELECT 
-                id, name 
-            FROM 
-                latatuadora_core.Style 
-            WHERE 
-                TRIM(LOWER(name)) like  (%${styleName.toLowerCase().trim()}%)"""
-        return this.queryFirstRow(styleByName)
+    List associateStudioWithStyle(Integer studioId, Integer styleId) {
+        String associateStudioWithStyle = """
+            INSERT INTO
+                latatuadora_core.StudioStyle (studioId, styleId)
+            VALUES (${studioId}, ${styleId})"""
+        this.executeInsert(associateStudioWithStyle, null)
+    }
+
+    List associateFreelanceWithStyle(Integer freelanceId, Integer styleId) {
+        String associateFreelanceWithStyle = """
+            INSERT INTO
+                latatuadora_core.FreelancerStyle(freelanceId, styleId)
+            VALUES (${freelanceId}, ${styleId})"""
+        this.executeInsert(associateFreelanceWithStyle, null)
     }
 
     Long findOrCreateTown(String townName) {
@@ -169,7 +161,7 @@ class DatabaseTool {
     Long findSuburb(Long stateId, String suburbName) {
         String normalizedSuburbName = ""
         Constants.NORMALIZED_SUBURB_MAP.each { key, value ->
-            if(suburbName.toLowerCase().trim() =~ key) {
+            if (suburbName.toLowerCase().trim() =~ key) {
                 normalizedSuburbName = value
             }
         }
@@ -246,5 +238,19 @@ class DatabaseTool {
         }
 
         log.debug(auxQuery)
+    }
+
+    void truncateAllStylesRelationships() {
+        String truncateQuery = "TRUNCATE TABLE latatuadora_core.ArtistStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.StudioStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.FreelancerStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
     }
 }
