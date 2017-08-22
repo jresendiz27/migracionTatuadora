@@ -24,17 +24,18 @@ class MigrateStudiosAndFreelancers {
     static void loadStudiosAndFreelancers(MigrateStudiosAndFreelancers thisInstance) {
         Map studioEmailMap = [:]
         Map freelanceEmailMap = [:]
+        Map artistEmailMap = [:]
 
         thisInstance.csvReader.loadStudiosAndFreelancers()
         thisInstance.csvReader.loadArtists()
+        thisInstance.csvReader.loadTattoos()
 
         List<Map> studios = thisInstance.csvReader.studios.unique { studioMap -> studioMap.email }
         List<Map> freelancers = thisInstance.csvReader.freelancers.unique { freelancerMap -> freelancerMap.email }
         List<Map> artists = thisInstance.csvReader.artists
+        List<Map> tattooImages = thisInstance.csvReader.tattoos
 
-        // TODO associate artists with studios
         // TODO associate tattoos images with studios and freelancers, upload them to the server?
-        // TODO create an inmemory map to know the user/studio/freelancer id based on the email
         studios.each { studioMap ->
             Integer createdAddressId = thisInstance.databaseTool.createAddress(studioMap).first()[0] as Integer
             studioMap.addressId = createdAddressId
@@ -64,9 +65,16 @@ class MigrateStudiosAndFreelancers {
                     }
                 }
             }
+            if (artistEmailMap.get("${artistMap.studioEmail?.trim()}")) {
+                List artistsIds = artistEmailMap.get("${artistMap.studioEmail?.trim()}")
+                artistsIds.add(artistId)
+                artistEmailMap.put("${artistMap.studioEmail?.trim()}", artistsIds)
+            } else {
+                artistEmailMap.put("${artistMap.studioEmail?.trim()}", [artistId])
+            }
+
 
         }
-
 
         freelancers.each { freelancerMap ->
             Integer createdAddressId = thisInstance.databaseTool.createAddress(freelancerMap).first()[0] as Integer
@@ -83,7 +91,23 @@ class MigrateStudiosAndFreelancers {
                     }
                 }
             }
+        }
 
+        tattooImages.each { tattooMap ->
+            Random random = new Random()
+            Integer artistId = null
+            Integer freelanceId = null
+            if (artistEmailMap.get("${tattooMap.studioEmail?.trim()}")) {
+                List ids = artistEmailMap.get("${tattooMap.studioEmail?.trim()}") as List
+                Integer randomIndex = random.nextInt(ids.size())
+                artistId = ids[randomIndex] as Integer
+            } else {
+                freelanceId = freelanceEmailMap.get("${artistMap.studioEmail?.trim()}").freelanceId
+            }
+            tattooMap.artist = artistId
+            tattooMap.freelancer = freelanceId
+
+            Integer tattooId = thisInstance.databaseTool.insertTattoo(tattooMap).first()[0] as Integer
         }
     }
 

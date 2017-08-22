@@ -253,4 +253,13 @@ class DatabaseTool {
         log.debug(truncateQuery)
         sql.execute(truncateQuery);
     }
+
+    List insertTattoo(Map tattooMap) {
+        String insertTattooQuery = """
+            INSERT INTO latatuadora_core.Tattoo 
+                (dimensionsX, dimensionsY, image, name, publicate, style, artist, freelancer, votes, createdAt, updatedAt) 
+            VALUES 
+                (NULL,NULL, 1, 9, '../images/mocktattoo.jpg', 'Tattoo', 1, 5, 7, null, 15, NOW(), NOW())""";
+        return this.executeInsert(insertTattooQuery, tattooMap)
+    }
 }

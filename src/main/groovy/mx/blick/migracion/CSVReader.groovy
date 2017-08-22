@@ -13,6 +13,7 @@ class CSVReader {
     List<Map> freelancers = []
     List<Map> clients = []
     List<Map> artists = []
+    List<Map> tattoos = []
 
     void loadClients() {
         String csvPath = getClass().getResource('/csv/clients.csv').getFile()
@@ -49,6 +50,18 @@ class CSVReader {
         data.each { PropertyMapper line ->
             Map artistSanitizedMap = sanitizeMap(line.toMap())
             artists.add(artistSanitizedMap)
+        }
+    }
+
+    void loadTattoos() {
+        String csvPath = getClass().getResource('/csv/images.csv').getFile()
+        String csvContent = new File(csvPath).text
+
+        CsvIterator data = parseCsv(csvContent) as CsvIterator
+        data.each { PropertyMapper line ->
+            Map map = sanitizeMap(line.toMap())
+            String studioTypeFromRow = (map.get("userType") as String)?.toLowerCase()?.trim()
+            tattoos.add(map)
         }
     }
 
