@@ -1,0 +1,2003 @@
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO
+                latatuadora_core.Town(name, createdAt, updatedAt)
+            VALUES
+                ('Cacalomacan', NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 15, 657, 63, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (gabriela, vidal, vidalg081@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 7228431405, 2, 1643, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Judith, Marquez, vidatotaljudith@live.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1644, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , libertygpoirotmakt@yahoo.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1645, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , teresitampastuchtjgq@yahoo.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1646, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (ericka lizbeth, zamorano, violet26.ez2@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5567406922, 2, 1647, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (viridiana, alvarado, viridiana.alvarado.moreno@outlook.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 18010109, 2, 1648, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , visionway@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1649, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Roberto, Vitorica, vitorica@live.com.mx, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5535180041, 2, 1650, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Vita, Macedonio Gutiérrez, vitta.mg765@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1651, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (juan pablo, cardenas, walo_ruso@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 3319911900, 2, 1652, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Wendy, Rojas, wendy_viridiana_11@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1653, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Wen, Guzman Avila, wendy.wera@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1654, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Xun, Katarn, whatever.i.shine.for.you@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1655, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Daniel, Arredondo, whiskas1476@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5549376759, 2, 1656, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Maricruz, López, wicca777@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1657, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , william.powell3@btinternet.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1658, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Antonio, Ruiz, willie_mf@outlook.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5526987626, 2, 1659, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Jose, Mora, wo7006tm@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5541311848, 2, 1660, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Suleica, Godoy, wonckita_11@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1661, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Carlos, Varona, wusa2016@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 7048186224, 2, 1662, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Verónica, Granados, xeniataisgwen@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5544573643, 2, 1663, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Chantal, Bañuelos, xhan.tal@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1664, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Ximena, Mora, ximena_escribe@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5585304474, 2, 1665, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Ximena, Baltazar, ximena.baltazarleon@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5566801463, 2, 1666, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Ximena, Mora, ximena.escribe@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5585304474, 2, 1667, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Diana Ximena, Pozos, ximena.love11@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 4426009750, 2, 1668, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Nuridya, Oseguera, xnu_21@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1669, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Xun, Katarn, xunaxhimr@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5530179021, 2, 1670, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , xx_yundilu_xx@live.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1671, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Linda, Hernandez, xXsmileyXx68@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1672, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Xymena, Su, xymena.320@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1673, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yair, Guadarrama, yaifer_murdoc@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5528469307, 2, 1674, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (DANIEL, PANTOJA, YAMAHA55@OUTLOOK.ES, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5554345198, 2, 1675, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Victor, Yamil Serna, yamilserna@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1676, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Salid cristoper, Rodríguez sandoval, yanerit_ramos@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5510713824, 2, 1677, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yaneli, Cruz, yaniis_babies@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 445545181363, 2, 1678, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yacki, Alvarez, yaquialvarez2012@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 7148559161, 2, 1679, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yareni, Jaz, yareni_cm@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1680, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yasayra, Sanchez, yas_poupee@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5529137057, 2, 1681, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (yezii, vazkez, yeangel_0304@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5515888715, 2, 1682, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yees, Aguilar, yeesaguilar@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5564950552, 2, 1683, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Cinthia, Zamora Becerril, yembeseh5@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5534324293, 2, 1684, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (arturo, cruz, yeray_letart@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5565610557, 2, 1685, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yetlanesi, Márquez Álvarez, yetlanesi.marquez@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', (044)-477-700-67-20, 2, 1686, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Italia, Yanet, yianetjrz@outlook.es, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1687, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yisel, Rivera Lopez, yiseltum@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5567662638, 2, 1688, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , mitondex@t.pl, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1689, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (victor manuel, cruz juan, yodex@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 2281780231, 2, 1690, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Daniela, Tinoco, yokas_3@live.com.mx, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5523088859, 2, 1691, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , yongmarcel@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1692, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yosi, Uribe, yosiuribe2009@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1693, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 15
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 15, 657, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Juliana, Ruiz, yuli_jen@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5527583765, 2, 1694, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yunuen, Acosta Villacetin, yunuen.av@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5545717253, 2, 1695, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yureny, Sanchez Ramirez, yure0118@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5529396689, 2, 1696, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yuri, Matias, yuriipiink@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5535673511, 2, 1697, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Yessica, Lechuga, yvlechuga@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1698, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Zague, Martinez, zague@altered.com.mx, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5563490514, 2, 1699, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Zaira Dione, Peredo, zaira_dps@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1700, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (mary, Zamora Galván, zamora_mg@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1701, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Zanelli, Mendoza Ramirez, zanelli_wisdom@live.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1702, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Arturo, Zamora, zapa84@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 4425920250, 2, 1703, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 3
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 3, 17, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Zaraby, Barrera, zaraby.br@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1704, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Zahira, Rodriguez, zayrdz22@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 8181169900, 2, 1705, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Sergio, Morales, zergiomoro@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1706, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (CESAR, ROMAN, zerverus.sioux@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5534962445, 2, 1707, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Brianda Sharon, Velázquez Malagón, zharini.pumas@gmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5540870664, 2, 1708, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Znalyndae, Lorely, znaly_123@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1709, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (, , russellstarke9667@hidebox.org, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1710, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Xochitl, Priego, zo240@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5532900277, 2, 1711, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Mariana, Piña, zoe_muler@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', , 2, 1712, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (, , , , , 9, 266, 1, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Zoé, Cortés, zoe_yont@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5564997928, 2, 1713, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Suburb
+            WHERE
+                stateId = 9
+            AND
+                lower(name) like ('%%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            SELECT
+                id, name
+            FROM
+                latatuadora_core.Town
+            WHERE                
+                lower(name) like ('%san juan de aragon%')
+            
+DEBUG main mx.blick.migracion.DatabaseTool - 
+                INSERT INTO 
+                    latatuadora_core.Address(street, numInt, numExt, lat, `long`, stateId, suburbId, townId, zc, createdAt, updatedAt)
+                VALUES
+                    (Av 557, , 168, , , 9, 266, 52, :zipCode, NOW(), NOW())
+DEBUG main mx.blick.migracion.DatabaseTool - 
+            INSERT INTO 
+                latatuadora_core.User(name, lastname, email, password, telephone, userType, addressId, createdAt, updatedAt) 
+            values 
+                (Daniel, Perez Llanos, zonda_456@hotmail.com, '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO', 5518670211, 2, 1714, NOW(), NOW())
