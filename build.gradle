@@ -28,3 +28,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+task runMigrationTask(type: JavaExec) {
+    dependsOn classes
+    classpath sourceSets.main.runtimeClasspath
+    main = "mx.blick.migracion.MigrateStudiosAndFreelancers"
+}
+
