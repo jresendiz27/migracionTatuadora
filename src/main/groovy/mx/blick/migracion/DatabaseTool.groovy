@@ -9,11 +9,13 @@ import java.sql.SQLException
 @Log4j
 class DatabaseTool {
 
-    private String url = "jdbc:mysql://35.161.232.194:3306/latatuadora_core";
+    //private String url = "jdbc:mysql://35.161.232.194:3306/latatuadora_core";
+    private String url = "jdbc:mysql://localhost:3306/latatuadora_core";
     private String user = "root";
     private String password = "n0m3l0s3";
     private String driver = "com.mysql.jdbc.Driver";
     String defaultPassword = '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO' //latatuadora-2017
+    String defaultImagesPath = "/media/jresendiz/ADATA HD710/latatuadora"
     private Sql sql;
 
     private DatabaseTool() throws SQLException, ClassNotFoundException {
@@ -48,6 +50,32 @@ class DatabaseTool {
         String truncateFreelance = "TRUNCATE TABLE latatuadora_core.Artist"
         log.debug(truncateFreelance)
         sql.execute(truncateFreelance);
+    }
+
+    void truncateAllRelationships() {
+        String truncateQuery = "TRUNCATE TABLE latatuadora_core.ArtistStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.StudioStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.FreelancerStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.TattooStyle"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.TattooElement"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
+
+        truncateQuery = "TRUNCATE TABLE latatuadora_core.Tattoo"
+        log.debug(truncateQuery)
+        sql.execute(truncateQuery);
     }
 
     List insertUserClient(Map values) {
@@ -231,35 +259,33 @@ class DatabaseTool {
         if (params) {
             for (key in params.keySet()) {
                 String namedParam = ":${key}"
+                def paramValue = params.get(namedParam)
+                if (!paramValue) {
+                    paramValue = "NULL"
+                }
                 if (auxQuery.indexOf(namedParam)) {
-                    auxQuery = auxQuery.replace(namedParam, params.get(key) as String)
+                    auxQuery = auxQuery.replace(namedParam, paramValue as String)
                 }
             }
         }
 
         log.debug(auxQuery)
     }
-
-    void truncateAllStylesRelationships() {
-        String truncateQuery = "TRUNCATE TABLE latatuadora_core.ArtistStyle"
-        log.debug(truncateQuery)
-        sql.execute(truncateQuery);
-
-        truncateQuery = "TRUNCATE TABLE latatuadora_core.StudioStyle"
-        log.debug(truncateQuery)
-        sql.execute(truncateQuery);
-
-        truncateQuery = "TRUNCATE TABLE latatuadora_core.FreelancerStyle"
-        log.debug(truncateQuery)
-        sql.execute(truncateQuery);
-    }
     // TODO insert tattoo
     List insertTattoo(Map tattooMap) {
+        // Download tattoo
+        String imagePath = null
+        if (tattooMap.imageUrlPath) {
+            imagePath = downloadFile(tattooMap.imageUrlPath as String)
+        }
+
+        tattooMap.image = imagePath
+
         String insertTattooQuery = """
-            INSERT INTO latatuadora_core.Tattoo 
-                (dimensionsX, dimensionsY, image, name, publicate, style, artist, freelancer, votes, createdAt, updatedAt) 
-            VALUES 
-                (NULL,NULL, 1, 9, '../images/mocktattoo.jpg', 'Tattoo', 1, 5, 7, null, 15, NOW(), NOW())""";
+            INSERT INTO latatuadora_core.Tattoo
+                (image, name, publicate, artist, freelancer, createdAt, updatedAt)
+            VALUES
+                (:image,:name, 1, :artist, :freelancer, NOW(),NOW())""";
         return this.executeInsert(insertTattooQuery, tattooMap)
     }
     // TODO insert styles per tattoo
@@ -270,5 +296,15 @@ class DatabaseTool {
             VALUES 
                 (${tattooId}, ${styleId})""";
         return this.executeInsert(insertTattooQuery, null)
+    }
+
+    String downloadFile(String address) {
+        UUID uuid = UUID.randomUUID()
+        String extention = address.tokenize(".")[-1]
+        String filePath = "${defaultImagesPath}/${uuid}.$extention"
+        new File(filePath).withOutputStream { out ->
+            out << new URL(address).openStream()
+        }
+        return filePath
     }
 }
