@@ -9,13 +9,12 @@ import java.sql.SQLException
 @Log4j
 class DatabaseTool {
 
-    //private String url = "jdbc:mysql://35.161.232.194:3306/latatuadora_core";
     private String url = "jdbc:mysql://localhost:3306/latatuadora_core";
     private String user = "root";
     private String password = "n0m3l0s3";
     private String driver = "com.mysql.jdbc.Driver";
     String defaultPassword = '$2a$10$iqLb4ON3lZXuG818y9u5Nez1f4LYbAgApzwOCiIZEOO9nWAL/2nFO' //latatuadora-2017
-    String defaultImagesPath = "/media/jresendiz/ADATA HD710/latatuadora"
+    String defaultImagesPath = "/opt/latatuadora/assets/images"
     private Sql sql;
 
     private DatabaseTool() throws SQLException, ClassNotFoundException {
@@ -271,15 +270,15 @@ class DatabaseTool {
 
         log.debug(auxQuery)
     }
-    // TODO insert tattoo
+
     List insertTattoo(Map tattooMap) {
         // Download tattoo
-        String imagePath = null
+        String imageName = null
         if (tattooMap.imageUrlPath) {
-            imagePath = downloadFile(tattooMap.imageUrlPath as String)
+            imageName = downloadFile(tattooMap.imageUrlPath as String)
         }
 
-        tattooMap.image = imagePath
+        tattooMap.image = imageName
 
         String insertTattooQuery = """
             INSERT INTO latatuadora_core.Tattoo
@@ -288,7 +287,7 @@ class DatabaseTool {
                 (:image,:name, 1, :artist, :freelancer, NOW(),NOW())""";
         return this.executeInsert(insertTattooQuery, tattooMap)
     }
-    // TODO insert styles per tattoo
+
     List associateTattooWithStyle(Integer tattooId, Integer styleId) {
         String insertTattooQuery = """
             INSERT INTO latatuadora_core.TattooStyle 
@@ -301,10 +300,11 @@ class DatabaseTool {
     String downloadFile(String address) {
         UUID uuid = UUID.randomUUID()
         String extention = address.tokenize(".")[-1]
-        String filePath = "${defaultImagesPath}/${uuid}.$extention"
+        String imageName = "${uuid}.$extention"
+        String filePath = "${defaultImagesPath}/$imageName"
         new File(filePath).withOutputStream { out ->
             out << new URL(address).openStream()
         }
-        return filePath
+        return imageName
     }
 }
