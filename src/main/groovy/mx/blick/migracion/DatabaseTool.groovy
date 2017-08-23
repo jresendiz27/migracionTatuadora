@@ -302,8 +302,12 @@ class DatabaseTool {
         String extention = address.tokenize(".")[-1]
         String imageName = "${uuid}.$extention"
         String filePath = "${defaultImagesPath}/$imageName"
-        new File(filePath).withOutputStream { out ->
-            out << new URL(address).openStream()
+        try {
+            new File(filePath).withOutputStream { out ->
+                out << new URL(address).openStream()
+            }
+        } catch (Exception e) {
+            imageName = null;
         }
         return imageName
     }
