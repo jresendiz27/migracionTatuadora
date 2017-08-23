@@ -102,12 +102,22 @@ class MigrateStudiosAndFreelancers {
                 Integer randomIndex = random.nextInt(ids.size())
                 artistId = ids[randomIndex] as Integer
             } else {
-                freelanceId = freelanceEmailMap.get("${artistMap.studioEmail?.trim()}").freelanceId
+                freelanceId = freelanceEmailMap.get("${tattooMap.studioEmail?.trim()}").freelanceId as Integer
             }
             tattooMap.artist = artistId
             tattooMap.freelancer = freelanceId
 
             Integer tattooId = thisInstance.databaseTool.insertTattoo(tattooMap).first()[0] as Integer
+
+            if (tattooMap.styles) {
+                tattooMap.styles.split(",").each { style ->
+                    String sanitizedStyle = StringUtil.capitalizeString(StringUtil.sanitizeString(style as String))
+                    Integer styleId = Constants.UNIQUE_STYLES.get(sanitizedStyle)
+                    if (styleId) {
+                        thisInstance.databaseTool.associateTattooWithStyle(tattooId, styleId)
+                    }
+                }
+            }
         }
     }
 
