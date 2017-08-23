@@ -253,7 +253,7 @@ class DatabaseTool {
         log.debug(truncateQuery)
         sql.execute(truncateQuery);
     }
-
+    // TODO insert tattoo
     List insertTattoo(Map tattooMap) {
         String insertTattooQuery = """
             INSERT INTO latatuadora_core.Tattoo 
@@ -261,5 +261,14 @@ class DatabaseTool {
             VALUES 
                 (NULL,NULL, 1, 9, '../images/mocktattoo.jpg', 'Tattoo', 1, 5, 7, null, 15, NOW(), NOW())""";
         return this.executeInsert(insertTattooQuery, tattooMap)
+    }
+    // TODO insert styles per tattoo
+    List associateTattooWithStyle(Integer tattooId, Integer styleId) {
+        String insertTattooQuery = """
+            INSERT INTO latatuadora_core.TattooStyle 
+                (tattooId, styleId) 
+            VALUES 
+                (${tattooId}, ${styleId})""";
+        return this.executeInsert(insertTattooQuery, null)
     }
 }
